@@ -159,7 +159,7 @@ article{
             content: "";
             background-color: $Bleufonce;
             width: 380px;
-            height: 2px;
+            height: 0.10rem;
             bottom: 45%;
             right: 100%;
         }
@@ -168,7 +168,7 @@ article{
             content: "";
             background-color: $Bleufonce;
             width: 380px;
-            height: 2px;
+            height: 0.10rem;
             bottom: 45%;
             left: 100%;
         }
@@ -188,7 +188,7 @@ footer{
             color: #FFFFFF;
             padding-bottom: 1rem;
             white-space: pre;
-            border-top: #FFFFFF solid 2px;
+            border-top: #FFFFFF solid 0.20rem;
         }
     }
     .resso{
@@ -225,7 +225,7 @@ footer{
             position: absolute;
             content: "";
             background-color: #FFFFFF;
-            width: 2px;
+            width: 0.20rem;
             height: 250px;
             top: 10%;
             left: 38%;
@@ -234,7 +234,7 @@ footer{
             position: absolute;
             content: "";
             background-color: #FFFFFF;
-            width: 2px;
+            width: 0.20rem;
             height: 250px;
             top: 10%;
             right: 35%;
