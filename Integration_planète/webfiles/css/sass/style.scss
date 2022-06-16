@@ -47,6 +47,7 @@ header {
 }
 
 main {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -146,31 +147,31 @@ article{
 }
 
 .leh2 {
-    position: relative;
     margin: auto;
-    max-width: 1200px;
     text-transform: uppercase;
+    max-width: 100%;
     .centre {
+        max-width: 1200px;
+        position: relative;
         text-align: center;
         margin: 1rem;
-
-        &::after {
+        &::after{
             position: absolute;
             content: "";
             background-color: $Bleufonce;
-            width: 380px;
             height: 0.10rem;
-            bottom: 45%;
-            right: 100%;
+            top: 0.8rem;
+            left: 65%;
+            right: -1rem;
         }
         &::before {
             position: absolute;
             content: "";
-            background-color: $Bleufonce;
-            width: 380px;
+            background-color: $Bleufonce;   
+            top: 0.8rem;
             height: 0.10rem;
-            bottom: 45%;
-            left: 100%;
+            left: -1rem; 
+            right: 65%;
         }
     }
 }

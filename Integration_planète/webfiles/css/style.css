@@ -41,6 +41,7 @@ header .terre {
 }
 
 main {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -122,12 +123,13 @@ article img {
 }
 
 .leh2 {
-  position: relative;
   margin: auto;
-  max-width: 1200px;
   text-transform: uppercase;
+  max-width: 100%;
 }
 .leh2 .centre {
+  max-width: 1200px;
+  position: relative;
   text-align: center;
   margin: 1rem;
 }
@@ -135,19 +137,19 @@ article img {
   position: absolute;
   content: "";
   background-color: #1B2430;
-  width: 380px;
   height: 0.1rem;
-  bottom: 45%;
-  right: 100%;
+  top: 0.8rem;
+  left: 65%;
+  right: -1rem;
 }
 .leh2 .centre::before {
   position: absolute;
   content: "";
   background-color: #1B2430;
-  width: 380px;
+  top: 0.8rem;
   height: 0.1rem;
-  bottom: 45%;
-  left: 100%;
+  left: -1rem;
+  right: 65%;
 }
 
 footer {
