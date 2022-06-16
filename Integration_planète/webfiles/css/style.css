@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #F6F6F6;
+}
+
+header nav {
+  max-width: 100%;
+  background-color: #1B2430;
+}
+header nav div {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  margin: auto;
+}
+header nav div li {
+  list-style: none;
+}
+header nav div li a {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  padding: 2.5rem 1rem;
+}
+header nav div li a:hover {
+  text-decoration: underline;
+}
+header nav div ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+header .terre {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .tellurique,
+main .gazeuse {
+  margin: auto;
+  max-width: 1200px;
+}
+main div .articledroite {
+  display: grid;
+  grid-template-areas: "illustration titre" "illustration texte";
+}
+main div .articledroite img {
+  grid-area: illustration;
+  margin-right: 3rem;
+}
+main div .articledroite .texte {
+  grid-area: texte;
+}
+main div .articledroite .titre {
+  grid-area: titre;
+}
+main div .articledroite .bouton {
+  display: flex;
+}
+main .articlegauche {
+  display: grid;
+  grid-template-areas: "titre illustration" "texte illustration";
+}
+main .articlegauche img {
+  grid-area: illustration;
+  margin-left: 3rem;
+}
+main .articlegauche .texte {
+  grid-area: texte;
+}
+main .articlegauche .titre {
+  grid-area: titre;
+}
+main .articlegauche .bouton {
+  display: flex;
+}
+
+article {
+  margin: 2rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+article div {
+  max-width: 770px;
+}
+article div h2 {
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+}
+article .bouton3 {
+  box-shadow: 0px 5px 5px rgb(138, 138, 138);
+  background-color: #816797;
+  color: #FFFFFF;
+  border-radius: 10px;
+  margin-right: 1rem;
+  padding: 1rem 0.75rem;
+}
+article .bouton1 {
+  box-shadow: 0px 5px 5px rgb(138, 138, 138);
+  background-color: #D6D5A8;
+  border-radius: 10px;
+  margin-right: 1rem;
+  padding: 1rem 0.75rem;
+}
+article .bouton2 {
+  color: #FFFFFF;
+  border-radius: 10px;
+  background-color: #1B2430;
+  padding: 1rem 0.75rem;
+  box-shadow: 0px 5px 5px rgb(138, 138, 138);
+}
+article img {
+  width: 300px;
+}
+
+.leh2 {
+  position: relative;
+  margin: auto;
+  max-width: 1200px;
+  text-transform: uppercase;
+}
+.leh2 .centre {
+  text-align: center;
+  margin: 1rem;
+}
+.leh2 .centre::after {
+  position: absolute;
+  content: "";
+  background-color: #1B2430;
+  width: 380px;
+  height: 2px;
+  bottom: 45%;
+  right: 100%;
+}
+.leh2 .centre::before {
+  position: absolute;
+  content: "";
+  background-color: #1B2430;
+  width: 380px;
+  height: 2px;
+  bottom: 45%;
+  left: 100%;
+}
+
+footer {
+  background-color: #1B2430;
+  max-width: 100%;
+}
+footer div {
+  max-width: 1200px;
+  position: relative;
+  margin: auto;
+}
+footer .barrep p {
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 1rem;
+  white-space: pre;
+  border-top: #FFFFFF solid 2px;
+}
+footer .resso {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  padding-bottom: 1rem;
+}
+footer .resso section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+footer .resso h2 {
+  color: #FFFFFF;
+  margin: 2rem 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+footer .resso ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+}
+footer .resso li {
+  list-style: none;
+  padding: 1rem 0;
+}
+footer .resso li a {
+  color: #9F9F9F;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+footer .resso ul::after {
+  position: absolute;
+  content: "";
+  background-color: #FFFFFF;
+  width: 2px;
+  height: 250px;
+  top: 10%;
+  left: 38%;
+}
+footer .resso ul::before {
+  position: absolute;
+  content: "";
+  background-color: #FFFFFF;
+  width: 2px;
+  height: 250px;
+  top: 10%;
+  right: 35%;
+}
+
+/*# sourceMappingURL=style.css.map */
