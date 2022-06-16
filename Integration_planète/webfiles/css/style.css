@@ -202,8 +202,8 @@ footer .resso ul::after {
   content: "";
   background-color: #FFFFFF;
   width: 0.2rem;
-  height: 250px;
-  top: 10%;
+  top: 2rem;
+  bottom: 1rem;
   left: 38%;
 }
 footer .resso ul::before {
@@ -211,8 +211,8 @@ footer .resso ul::before {
   content: "";
   background-color: #FFFFFF;
   width: 0.2rem;
-  height: 250px;
-  top: 10%;
+  top: 2rem;
+  bottom: 1rem;
   right: 35%;
 }
 
