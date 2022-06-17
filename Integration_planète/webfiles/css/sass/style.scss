@@ -1,12 +1,28 @@
+/*  Table des contenu  */
+/*                     */
+/* 1 | GLOBAL          */
+/* 2 | HEADER          */
+/* 3 | NAVBAR          */
+/* 4 | MAIN            */
+/* 5 | ARTICLE         */
+/* 6 | FOOTER          */
+
+
+
+
 $Bleufonce: #1B2430;
 
+/* 1 | GLOBAL          */
 * {
     margin: 0;
 }
 body{
     background-color: #F6F6F6;
 }
+
+/* 2 | HEADER          */
 header {
+    /* 3 | NAVBAR          */
     nav {
         max-width: 100%;
         background-color: $Bleufonce;
@@ -46,6 +62,7 @@ header {
     }
 }
 
+/* 4 | MAIN            */
 main {
     max-width: 100%;
     display: flex;
@@ -57,24 +74,10 @@ main {
         max-width: 1200px;
 
     }
+    /* 5 | ARTICLE         */
     div .articledroite {
-        display: grid;
-        grid-template-areas:
-            'illustration titre'
-            'illustration texte';
-
-        img {
-            grid-area: illustration;
-            margin-right: 3rem ;
-        }
-        
-        .texte {
-            grid-area: texte;
-        }
-        
-        .titre {
-            grid-area: titre;
-        }
+        display: flex;
+    
         
         .bouton {
             display: flex;
@@ -83,24 +86,8 @@ main {
     }
 
     .articlegauche {
-        display: grid;
-        grid-template-areas:
-            'titre illustration'
-            'texte illustration';
-
-        img {
-            grid-area: illustration;
-            margin-left: 3rem ;
-        }
-
-        .texte {
-            grid-area: texte;
-        }
-
-        .titre {
-            grid-area: titre;
-        }
-
+        display: flex;
+        flex-direction: row-reverse;
         .bouton {
             display: flex;
         }
@@ -144,6 +131,9 @@ article{
     img{
         width: 300px;
     }
+    .texte{
+        text-align: justify;
+    }
 }
 
 .leh2 {
@@ -155,26 +145,24 @@ article{
         position: relative;
         text-align: center;
         margin: 1rem;
-        &::after{
+        &::after, &::before{
             position: absolute;
             content: "";
             background-color: $Bleufonce;
             height: 0.10rem;
             top: 0.8rem;
-            left: 65%;
+        }
+        &::after{
+            left: 68%;
             right: -1rem;
         }
-        &::before {
-            position: absolute;
-            content: "";
-            background-color: $Bleufonce;   
-            top: 0.8rem;
-            height: 0.10rem;
+        &::before { 
             left: -1rem; 
-            right: 65%;
+            right: 68%;
         }
     }
 }
+/* 6 | FOOTER          */
 footer{
     background-color: $Bleufonce;
     max-width: 100%;
@@ -242,3 +230,89 @@ footer{
         }
     }
 }
+
+/* @media screen and (max-width : 975px) {
+    header{
+        position: relative;
+        nav{
+            &::after{
+                position: absolute;
+                content: "";
+                background-color: #FFFFFF;
+                height: 0.10rem;
+                top: 3rem;
+                left: 80%; 
+                right: 4rem;
+
+            }
+            ul img{
+                padding: 2.5rem 1rem;
+            }
+            ul:last-of-type{
+                display: none;
+
+            }
+        }
+    }
+    main{
+        max-width: 100%;
+        .tellurique,
+        .gazeuse {
+            max-width: 975px;
+            .bouton{
+                justify-content: center
+            }
+        }
+        .articledroite{
+            display: flex;
+            max-width: 975px;
+            justify-items: center;
+            img{
+                object-fit: none;
+                object-position: -150px 0;
+            }
+        }
+        .articlegauche{
+            justify-items: center;
+            img{
+                object-fit: none;
+                object-position: 150px 0;
+            }
+        }
+        .bouton1, .bouton2, .bouton3{
+            padding: 0.5rem 5rem;
+        }
+        .titre{
+            text-align: center;
+        }
+        .leh2{
+            display: none;
+        }
+    }
+    footer{
+        div{
+            max-width: 975px;
+        }
+    }
+    .resso{
+        flex-direction: column;
+        align-items: center;
+        ul{
+            &::before{
+                display: none;
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
+    .barrep{
+        p{
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+
+ */

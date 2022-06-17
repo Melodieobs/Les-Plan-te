@@ -1,3 +1,12 @@
+/*  Table des contenu  */
+/*                     */
+/* 1 | GLOBAL          */
+/* 2 | HEADER          */
+/* 3 | NAVBAR          */
+/* 4 | MAIN            */
+/* 5 | ARTICLE         */
+/* 6 | FOOTER          */
+/* 1 | GLOBAL          */
 * {
   margin: 0;
 }
@@ -6,6 +15,10 @@ body {
   background-color: #F6F6F6;
 }
 
+/* 2 | HEADER          */
+header {
+  /* 3 | NAVBAR          */
+}
 header nav {
   max-width: 100%;
   background-color: #1B2430;
@@ -40,10 +53,12 @@ header .terre {
   object-fit: cover;
 }
 
+/* 4 | MAIN            */
 main {
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  /* 5 | ARTICLE         */
 }
 main .tellurique,
 main .gazeuse {
@@ -51,35 +66,14 @@ main .gazeuse {
   max-width: 1200px;
 }
 main div .articledroite {
-  display: grid;
-  grid-template-areas: "illustration titre" "illustration texte";
-}
-main div .articledroite img {
-  grid-area: illustration;
-  margin-right: 3rem;
-}
-main div .articledroite .texte {
-  grid-area: texte;
-}
-main div .articledroite .titre {
-  grid-area: titre;
+  display: flex;
 }
 main div .articledroite .bouton {
   display: flex;
 }
 main .articlegauche {
-  display: grid;
-  grid-template-areas: "titre illustration" "texte illustration";
-}
-main .articlegauche img {
-  grid-area: illustration;
-  margin-left: 3rem;
-}
-main .articlegauche .texte {
-  grid-area: texte;
-}
-main .articlegauche .titre {
-  grid-area: titre;
+  display: flex;
+  flex-direction: row-reverse;
 }
 main .articlegauche .bouton {
   display: flex;
@@ -121,6 +115,9 @@ article .bouton2 {
 article img {
   width: 300px;
 }
+article .texte {
+  text-align: justify;
+}
 
 .leh2 {
   margin: auto;
@@ -133,25 +130,23 @@ article img {
   text-align: center;
   margin: 1rem;
 }
-.leh2 .centre::after {
+.leh2 .centre::after, .leh2 .centre::before {
   position: absolute;
   content: "";
   background-color: #1B2430;
   height: 0.1rem;
   top: 0.8rem;
-  left: 65%;
+}
+.leh2 .centre::after {
+  left: 68%;
   right: -1rem;
 }
 .leh2 .centre::before {
-  position: absolute;
-  content: "";
-  background-color: #1B2430;
-  top: 0.8rem;
-  height: 0.1rem;
   left: -1rem;
-  right: 65%;
+  right: 68%;
 }
 
+/* 6 | FOOTER          */
 footer {
   background-color: #1B2430;
   max-width: 100%;
@@ -217,5 +212,91 @@ footer .resso ul::before {
   bottom: 1rem;
   right: 35%;
 }
+
+/* @media screen and (max-width : 975px) {
+    header{
+        position: relative;
+        nav{
+            &::after{
+                position: absolute;
+                content: "";
+                background-color: #FFFFFF;
+                height: 0.10rem;
+                top: 3rem;
+                left: 80%; 
+                right: 4rem;
+
+            }
+            ul img{
+                padding: 2.5rem 1rem;
+            }
+            ul:last-of-type{
+                display: none;
+
+            }
+        }
+    }
+    main{
+        max-width: 100%;
+        .tellurique,
+        .gazeuse {
+            max-width: 975px;
+            .bouton{
+                justify-content: center
+            }
+        }
+        .articledroite{
+            display: flex;
+            max-width: 975px;
+            justify-items: center;
+            img{
+                object-fit: none;
+                object-position: -150px 0;
+            }
+        }
+        .articlegauche{
+            justify-items: center;
+            img{
+                object-fit: none;
+                object-position: 150px 0;
+            }
+        }
+        .bouton1, .bouton2, .bouton3{
+            padding: 0.5rem 5rem;
+        }
+        .titre{
+            text-align: center;
+        }
+        .leh2{
+            display: none;
+        }
+    }
+    footer{
+        div{
+            max-width: 975px;
+        }
+    }
+    .resso{
+        flex-direction: column;
+        align-items: center;
+        ul{
+            &::before{
+                display: none;
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
+    .barrep{
+        p{
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+
+ */
 
 /*# sourceMappingURL=style.css.map */
