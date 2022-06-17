@@ -81,6 +81,7 @@ main {
         
         .bouton {
             display: flex;
+            margin-bottom: 1rem;
         }
 
     }
@@ -90,6 +91,7 @@ main {
         flex-direction: row-reverse;
         .bouton {
             display: flex;
+            margin-bottom: 1rem;
         }
     }
 }
@@ -131,7 +133,7 @@ article{
     img{
         width: 300px;
     }
-    .texte{
+    p{
         text-align: justify;
     }
 }
@@ -240,8 +242,21 @@ footer{
                 content: "";
                 background-color: #FFFFFF;
                 height: 0.10rem;
+                top: 4rem;
+                left: 85%; 
+                right: 4rem;
+
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                background-color: $Bleufonce;
+                padding-bottom: 2rem;
+                border-top: 2px solid #FFFFFF;
+                border-bottom: 2px solid #FFFFFF;
+                height: 0.10rem;
                 top: 3rem;
-                left: 80%; 
+                left: 85%; 
                 right: 4rem;
 
             }
@@ -270,6 +285,7 @@ footer{
             img{
                 object-fit: cover;
                 object-position: -150px 0;
+                margin-right: -150px;
             }
         }
         .articlegauche{
@@ -277,6 +293,7 @@ footer{
             img{
                 object-fit: none;
                 object-position: 150px 0;
+                margin-left: -150px;
             }
         }
         .bouton1, .bouton2, .bouton3{
