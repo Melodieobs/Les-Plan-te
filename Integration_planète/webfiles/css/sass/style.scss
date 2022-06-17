@@ -231,7 +231,7 @@ footer{
     }
 }
 
-/* @media screen and (max-width : 975px) {
+@media screen and (max-width : 975px) {
     header{
         position: relative;
         nav{
@@ -268,7 +268,7 @@ footer{
             max-width: 975px;
             justify-items: center;
             img{
-                object-fit: none;
+                object-fit: cover;
                 object-position: -150px 0;
             }
         }
@@ -315,4 +315,3 @@ footer{
     }
 }
 
- */

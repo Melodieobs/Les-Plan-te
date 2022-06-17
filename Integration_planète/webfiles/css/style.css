@@ -213,90 +213,79 @@ footer .resso ul::before {
   right: 35%;
 }
 
-/* @media screen and (max-width : 975px) {
-    header{
-        position: relative;
-        nav{
-            &::after{
-                position: absolute;
-                content: "";
-                background-color: #FFFFFF;
-                height: 0.10rem;
-                top: 3rem;
-                left: 80%; 
-                right: 4rem;
-
-            }
-            ul img{
-                padding: 2.5rem 1rem;
-            }
-            ul:last-of-type{
-                display: none;
-
-            }
-        }
-    }
-    main{
-        max-width: 100%;
-        .tellurique,
-        .gazeuse {
-            max-width: 975px;
-            .bouton{
-                justify-content: center
-            }
-        }
-        .articledroite{
-            display: flex;
-            max-width: 975px;
-            justify-items: center;
-            img{
-                object-fit: none;
-                object-position: -150px 0;
-            }
-        }
-        .articlegauche{
-            justify-items: center;
-            img{
-                object-fit: none;
-                object-position: 150px 0;
-            }
-        }
-        .bouton1, .bouton2, .bouton3{
-            padding: 0.5rem 5rem;
-        }
-        .titre{
-            text-align: center;
-        }
-        .leh2{
-            display: none;
-        }
-    }
-    footer{
-        div{
-            max-width: 975px;
-        }
-    }
-    .resso{
-        flex-direction: column;
-        align-items: center;
-        ul{
-            &::before{
-                display: none;
-            }
-            &::after{
-                display: none;
-            }
-        }
-    }
-    .barrep{
-        p{
-            font-size: 1rem;
-            font-weight: 500;
-            text-align: center;
-        }
-    }
+@media screen and (max-width: 975px) {
+  header {
+    position: relative;
+  }
+  header nav::after {
+    position: absolute;
+    content: "";
+    background-color: #FFFFFF;
+    height: 0.1rem;
+    top: 3rem;
+    left: 80%;
+    right: 4rem;
+  }
+  header nav ul img {
+    padding: 2.5rem 1rem;
+  }
+  header nav ul:last-of-type {
+    display: none;
+  }
+  main {
+    max-width: 100%;
+  }
+  main .tellurique,
+main .gazeuse {
+    max-width: 975px;
+  }
+  main .tellurique .bouton,
+main .gazeuse .bouton {
+    justify-content: center;
+  }
+  main .articledroite {
+    display: flex;
+    max-width: 975px;
+    justify-items: center;
+  }
+  main .articledroite img {
+    object-fit: cover;
+    object-position: -150px 0;
+  }
+  main .articlegauche {
+    justify-items: center;
+  }
+  main .articlegauche img {
+    object-fit: none;
+    object-position: 150px 0;
+  }
+  main .bouton1, main .bouton2, main .bouton3 {
+    padding: 0.5rem 5rem;
+  }
+  main .titre {
+    text-align: center;
+  }
+  main .leh2 {
+    display: none;
+  }
+  footer div {
+    max-width: 975px;
+  }
+  .resso {
+    flex-direction: column;
+    align-items: center;
+  }
+  .resso ul::before {
+    display: none;
+  }
+  .resso ul::after {
+    display: none;
+  }
+  .barrep p {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
 }
-
- */
 
 /*# sourceMappingURL=style.css.map */
