@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*  Table des contenu  */
 /*                     */
 /* 1 | GLOBAL          */
@@ -6,6 +7,18 @@
 /* 4 | MAIN            */
 /* 5 | ARTICLE         */
 /* 6 | FOOTER          */
+@font-face {
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../../../Integration_planète/src/typo/montserrat-italic-variablefont_wght-webfont.woff") format("woff"), url("../../../Integration_planète/src/typo/montserrat-italic-variablefont_wght-webfont.woff2") format("woff2");
+  }
+}
+@font-face {
+  @font-face {
+    font-family: "Roboto";
+    src: url("../../../Integration_planète/src/typo/roboto-light-webfont.woff") format("woff"), url("../../../Integration_planète/src/typo/roboto-light-webfont.woff2") format("woff2");
+  }
+}
 /* 1 | GLOBAL          */
 * {
   margin: 0;
@@ -34,7 +47,7 @@ header nav div li {
   list-style: none;
 }
 header nav div li a {
-  font-family: Roboto;
+  font-family: Montserrat;
   text-decoration: none;
   color: #FFFFFF;
   display: block;
@@ -71,6 +84,7 @@ main .gazeuse {
   width: 100%;
 }
 main div .articledroite {
+  font-family: Roboto;
   display: flex;
   padding: 3rem;
   max-width: 100%;
@@ -84,9 +98,10 @@ main div .articledroite .bouton {
   margin-left: 0;
 }
 main .articlegauche {
+  font-family: Roboto;
   display: flex;
-  flex-direction: row-reverse;
   padding: 3rem;
+  flex-direction: row-reverse;
 }
 main .articlegauche div {
   margin-right: 7rem;
@@ -99,7 +114,6 @@ main .articlegauche .bouton {
 
 article {
   margin: 2rem 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 article div {
   max-width: 775px;
@@ -140,6 +154,7 @@ article p {
 }
 
 .leh2 {
+  font-family: Roboto;
   margin: auto;
   text-transform: uppercase;
   max-width: 100%;
@@ -178,6 +193,7 @@ footer div {
   margin: auto;
 }
 footer .barrep p {
+  font-family: Montserrat;
   text-align: center;
   color: #FFFFFF;
   white-space: pre;
@@ -196,9 +212,9 @@ footer .resso section {
   align-items: center;
 }
 footer .resso h2 {
+  font-family: Roboto;
   color: #FFFFFF;
   margin: 2rem 0;
-  font-family: Roboto;
 }
 footer .resso ul {
   display: flex;
@@ -211,9 +227,9 @@ footer .resso li {
   padding: 0.5rem 0;
 }
 footer .resso li a {
+  font-family: Montserrat;
   color: #9F9F9F;
   text-decoration: none;
-  font-family: Roboto;
   padding: 0.5rem 2rem;
 }
 footer .resso li a:hover {
@@ -283,6 +299,7 @@ footer .resso ul::before {
 main .gazeuse {
     max-width: 875px;
     width: 100%;
+    font-size: 0.75rem;
   }
   main .tellurique .bouton,
 main .gazeuse .bouton {
@@ -292,31 +309,30 @@ main .gazeuse .bouton {
 main .gazeuse h2 {
     font-size: 1.2rem;
   }
-  main .articledroite {
+  main div .articledroite {
+    padding: 0;
     position: relative;
     display: flex;
     max-width: 875px;
     justify-items: center;
-    font-size: 0.6rem;
   }
-  main .articledroite img {
-    width: 275px;
+  main div .articledroite img {
+    max-height: 193px;
     position: absolute;
-    object-fit: cover;
-    object-position: -150px;
+    object-position: -100px;
     left: 0;
   }
-  main .articlegauche {
+  main div .articlegauche {
+    padding: 0;
+    padding-left: 1rem;
     justify-items: center;
-    font-size: 0.6rem;
     padding-bottom: 0;
     padding-top: 0;
   }
-  main .articlegauche img {
-    width: 275px;
+  main div .articlegauche img {
+    max-width: 193px;
     position: absolute;
-    object-fit: cover;
-    object-position: 150px;
+    object-position: 100px;
     right: 0;
   }
   main .bouton1, main .bouton2, main .bouton3 {
@@ -348,6 +364,44 @@ main .gazeuse h2 {
     font-weight: 100;
     font-size: 8px;
     text-align: center;
+  }
+}
+/* @media screen and(max-width: 375px){
+    main{
+        .articledroite .bouton, .articlegauche .bouton{
+            flex-direction: column;
+            text-align: center;
+        }
+        article{
+            .bouton1{
+                margin: 0;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        }
+    } */
+@media screen and (max-width: 375px) {
+  main div .articlegauche {
+    padding: 0;
+  }
+  main div .articlegauche div {
+    margin-right: 0;
+  }
+  main div .articledroite div {
+    margin-left: 0;
+  }
+  main div .articledroite, main div .articlegauche {
+    display: flex;
+    flex-direction: column;
+  }
+  main div .articledroite img, main div .articlegauche img {
+    position: inherit;
+    object-position: 0;
+  }
+  main div article img {
+    width: 100%;
   }
 }
 

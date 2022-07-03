@@ -7,11 +7,24 @@
 /* 5 | ARTICLE         */
 /* 6 | FOOTER          */
 
+@font-face {
+    @font-face {
+        font-family: "Montserrat";
+        src: url("../../../Integration_planète/src/typo/montserrat-italic-variablefont_wght-webfont.woff") format("woff"),
+            url("../../../Integration_planète/src/typo/montserrat-italic-variablefont_wght-webfont.woff2") format("woff2");
+    }
+}
 
+@font-face {
+    @font-face {
+        font-family: "Roboto";
+        src: url("../../../Integration_planète/src/typo/roboto-light-webfont.woff") format("woff"),
+            url("../../../Integration_planète/src/typo/roboto-light-webfont.woff2") format("woff2");
+    }
+}
 
 
 $Bleufonce: #1B2430;
-
 /* 1 | GLOBAL          */
 * {
     margin: 0;
@@ -36,7 +49,7 @@ header {
                 list-style: none;
                 
                 a{
-                    font-family: Roboto;
+                    font-family: Montserrat;
                     text-decoration: none;
                     color: #FFFFFF;
                     display: block;
@@ -80,26 +93,24 @@ main {
     }
     /* 5 | ARTICLE         */
     div .articledroite {
+        font-family: Roboto;
         display: flex;
         padding: 3rem;
         max-width: 100%;
         div{
             margin-left: 7rem;
-        }
-    
-        
+        }  
         .bouton {
             display: flex;
             margin-bottom: 1rem;
             margin-left: 0;
         }
-
     }
-
     .articlegauche {
+        font-family: Roboto;
         display: flex;
-        flex-direction: row-reverse;
         padding: 3rem;
+        flex-direction: row-reverse;
         div{
             margin-right: 7rem;
         }
@@ -113,7 +124,6 @@ main {
 
 article{
     margin: 2rem 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     div{
         max-width: 775px;
         h2{
@@ -156,6 +166,7 @@ article{
 }
 
 .leh2 {
+    font-family: Roboto;
     margin: auto;
     text-transform: uppercase;
     max-width: 100%;
@@ -193,6 +204,7 @@ footer{
     }
     .barrep{
         p{
+            font-family: Montserrat;
             text-align: center;
             color: #FFFFFF;
             white-space: pre;
@@ -211,9 +223,9 @@ footer{
             align-items: center;
         }
         h2{
+            font-family: Roboto;
             color: #FFFFFF;
             margin: 2rem 0;
-            font-family: Roboto;
         }
         ul{
             display: flex;
@@ -225,9 +237,9 @@ footer{
             list-style: none;
             padding: 0.5rem 0;
             a{
+                font-family: Montserrat;
                 color: #9F9F9F;
                 text-decoration: none;
-                font-family: Roboto;
                 padding: 0.5rem 2rem;
                 &:hover{
                     background-color: lighten(#1B2430, 5%);
@@ -303,6 +315,7 @@ footer{
         .gazeuse {
             max-width: 875px;
             width: 100%;
+            font-size: 0.75rem;
             .bouton{
                 justify-content: center;
             }
@@ -310,33 +323,34 @@ footer{
                 font-size: 1.2rem;
             }
         }
+        div{
         .articledroite{
+            padding: 0;
             position: relative;
             display: flex;
             max-width: 875px;
             justify-items: center;
-            font-size: 0.6rem;
             img{
-                width: 275px;
+                max-height: 193px;
                 position: absolute;
-                object-fit: cover;
-                object-position: -150px;
+                object-position: -100px;
                 left:0; 
             }
         }
         .articlegauche{
+            padding: 0;
+            padding-left: 1rem;
             justify-items: center;
-            font-size: 0.6rem;
             padding-bottom: 0;
             padding-top: 0;
             img{
-                width: 275px;
+                max-width: 193px;
                 position: absolute;
-                object-fit: cover;
-                object-position: 150px;
+                object-position: 100px;
                 right:0; 
             }
         }
+    }
         .bouton1, .bouton2, .bouton3{
             padding: 0.4rem 0.5rem;
             letter-spacing: 3px;
@@ -375,4 +389,47 @@ footer{
         }
     }
 }
-
+/* @media screen and(max-width: 375px){
+    main{
+        .articledroite .bouton, .articlegauche .bouton{
+            flex-direction: column;
+            text-align: center;
+        }
+        article{
+            .bouton1{
+                margin: 0;
+            }
+            img{
+                width: 100%;
+            }
+        }
+        }
+    } */
+@media screen and(max-width: 375px){
+    main{
+        div{
+            .articlegauche{
+                padding: 0;
+            }
+            .articlegauche div{
+                margin-right: 0;
+            }
+            .articledroite div{
+                margin-left: 0;
+            }
+            .articledroite, .articlegauche{
+                display: flex;
+                flex-direction: column;
+                img{
+                    position: inherit;
+                    object-position: 0;
+                }
+            }
+            article{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
