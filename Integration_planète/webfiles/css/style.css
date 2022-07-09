@@ -8,16 +8,12 @@
 /* 5 | ARTICLE         */
 /* 6 | FOOTER          */
 @font-face {
-  @font-face {
-    font-family: "Montserrat";
-    src: url("../../../Integration_planète/src/typo/montserrat-italic-variablefont_wght-webfont.woff") format("woff"), url("../../../Integration_planète/src/typo/montserrat-italic-variablefont_wght-webfont.woff2") format("woff2");
-  }
+  font-family: "Montserrat";
+  src: url("../../../Integration_planète/src/typo/montserrat-variablefont_wght-webfont.woff") format("woff"), url("../../../Integration_planète/src/typo/montserrat-variablefont_wght-webfont.woff2") format("woff2"), url("../../../Integration_planète/src/typo/montserrat-variablefont_wght-webfont.ttf") format("truetype");
 }
 @font-face {
-  @font-face {
-    font-family: "Roboto";
-    src: url("../../../Integration_planète/src/typo/roboto-light-webfont.woff") format("woff"), url("../../../Integration_planète/src/typo/roboto-light-webfont.woff2") format("woff2");
-  }
+  font-family: "Roboto";
+  src: url("../../../Integration_planète/src/typo/roboto-light-webfont.woff") format("woff"), url("../../../Integration_planète/src/typo/roboto-light-webfont.woff2") format("woff2");
 }
 /* 1 | GLOBAL          */
 * {
@@ -47,11 +43,14 @@ header nav div li {
   list-style: none;
 }
 header nav div li a {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   text-decoration: none;
   color: #FFFFFF;
   display: block;
   padding: 2.5rem 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 23px;
 }
 header nav div li a:hover {
   text-decoration: underline;
@@ -80,13 +79,18 @@ main {
 main .tellurique,
 main .gazeuse {
   margin: auto;
-  max-width: 1169px;
+  max-width: 1200px;
   width: 100%;
 }
-main div .articledroite {
-  font-family: Roboto;
+main .articledroite, main .articlegauche {
+  font-family: "Roboto";
   display: flex;
   padding: 3rem;
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+main div .articledroite {
   max-width: 100%;
 }
 main div .articledroite div {
@@ -98,9 +102,6 @@ main div .articledroite .bouton {
   margin-left: 0;
 }
 main .articlegauche {
-  font-family: Roboto;
-  display: flex;
-  padding: 3rem;
   flex-direction: row-reverse;
 }
 main .articlegauche div {
@@ -122,31 +123,35 @@ article div h2 {
   padding: 1rem 0;
   font-size: 2.5rem;
   letter-spacing: 3px;
+  line-height: 41px;
+  font-weight: 700;
+}
+article .bouton3, article .bouton2, article .bouton1 {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 21px;
+  font-weight: 500;
+  font-size: 1.12rem;
+  letter-spacing: 3px;
+  padding: 0.75rem 1rem;
 }
 article .bouton3 {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(0deg, rgb(81, 85, 126) 10%, rgb(129, 103, 151) 30%);
   color: #FFFFFF;
   border-radius: 10px;
   margin-right: 1rem;
-  padding: 0.75rem 1rem;
 }
 article .bouton1 {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: #D6D5A8;
   border-radius: 10px;
   margin-right: 1rem;
-  padding: 0.75rem 1rem;
 }
 article .bouton2 {
   color: #FFFFFF;
   border-radius: 10px;
   background-color: #1B2430;
-  padding: 0.75rem 1rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 article img {
-  width: 330px;
+  width: 300px;
   object-fit: contain;
 }
 article p {
@@ -154,10 +159,13 @@ article p {
 }
 
 .leh2 {
-  font-family: Roboto;
+  font-family: "Roboto";
   margin: auto;
   text-transform: uppercase;
   max-width: 100%;
+  font-weight: 500;
+  font-size: 1.87rem;
+  line-height: 35px;
   margin: 4rem 0;
 }
 .leh2 .centre {
@@ -171,7 +179,7 @@ article p {
   content: "";
   background-color: #1B2430;
   height: 2px;
-  width: 25%;
+  width: 22%;
   top: 50%;
 }
 .leh2 .centre::after {
@@ -188,16 +196,19 @@ footer {
   max-width: 100%;
 }
 footer div {
-  max-width: 1200px;
+  max-width: 1920px;
   position: relative;
   margin: auto;
 }
 footer .barrep p {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   text-align: center;
   color: #FFFFFF;
   white-space: pre;
   border-top: #C4C4C4 solid 1px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 23px;
 }
 footer .resso {
   display: flex;
@@ -212,9 +223,13 @@ footer .resso section {
   align-items: center;
 }
 footer .resso h2 {
-  font-family: Roboto;
+  font-family: "Roboto";
   color: #FFFFFF;
   margin: 2rem 0;
+  font-weight: 700;
+  font-size: 1.87rem;
+  letter-spacing: 3px;
+  line-height: 40px;
 }
 footer .resso ul {
   display: flex;
@@ -227,10 +242,13 @@ footer .resso li {
   padding: 0.5rem 0;
 }
 footer .resso li a {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   color: #9F9F9F;
   text-decoration: none;
   padding: 0.5rem 2rem;
+  font-size: 1rem;
+  line-height: 23px;
+  font-weight: 500;
 }
 footer .resso li a:hover {
   background-color: #243040;
@@ -253,7 +271,7 @@ footer .resso ul::before {
   width: 1px;
   top: 2rem;
   bottom: 1rem;
-  right: 36%;
+  right: 33%;
 }
 
 @media screen and (max-width: 875px) {
@@ -310,11 +328,14 @@ main .gazeuse h2 {
     font-size: 1.2rem;
   }
   main div .articledroite {
-    padding: 0;
+    align-items: flex-end;
+    padding-left: 5rem;
     position: relative;
     display: flex;
-    max-width: 875px;
+    max-width: 575px;
     justify-items: center;
+    font-size: 0.75rem;
+    line-height: 16px;
   }
   main div .articledroite img {
     max-height: 193px;
@@ -323,11 +344,16 @@ main .gazeuse h2 {
     left: 0;
   }
   main div .articlegauche {
+    margin: auto;
+    align-items: flex-end;
     padding: 0;
     padding-left: 1rem;
     justify-items: center;
     padding-bottom: 0;
     padding-top: 0;
+    font-size: 0.75rem;
+    line-height: 16px;
+    max-width: 575px;
   }
   main div .articlegauche img {
     max-width: 193px;
@@ -350,6 +376,11 @@ main .gazeuse h2 {
   footer div {
     max-width: 875px;
   }
+  footer .barrep p {
+    white-space: inherit;
+    font-weight: 100;
+    text-align: center;
+  }
   .resso {
     flex-direction: column;
     align-items: center;
@@ -360,48 +391,51 @@ main .gazeuse h2 {
   .resso ul::after {
     display: none;
   }
-  .barrep p {
-    font-weight: 100;
-    font-size: 8px;
-    text-align: center;
-  }
 }
-/* @media screen and(max-width: 375px){
-    main{
-        .articledroite .bouton, .articlegauche .bouton{
-            flex-direction: column;
-            text-align: center;
-        }
-        article{
-            .bouton1{
-                margin: 0;
-            }
-            img{
-                width: 100%;
-            }
-        }
-        }
-    } */
-@media screen and (max-width: 375px) {
-  main div .articlegauche {
-    padding: 0;
+@media screen and (max-width: 475px) {
+  main {
+    align-items: center;
+  }
+  main div .articlegauche img {
+    object-position: 130px;
+  }
+  main div .articledroite img {
+    object-position: -130px;
   }
   main div .articlegauche div {
-    margin-right: 0;
+    margin-right: 3rem;
   }
   main div .articledroite div {
-    margin-left: 0;
+    margin-left: 3.5rem;
   }
   main div .articledroite, main div .articlegauche {
+    padding: 3rem;
     display: flex;
-    flex-direction: column;
-  }
-  main div .articledroite img, main div .articlegauche img {
-    position: inherit;
-    object-position: 0;
+    margin: 0;
   }
   main div article img {
     width: 100%;
+  }
+  footer .resso h2 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 300px) {
+  main {
+    padding: 0.5rem;
+  }
+  main div .articledroite, main div .articlegauche {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main div .articledroite div, main div .articlegauche div {
+    margin: auto;
+  }
+  main div .articledroite img, main div .articlegauche img {
+    position: initial;
+    object-position: 0;
   }
 }
 
