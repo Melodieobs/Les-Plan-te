@@ -34,7 +34,8 @@ body{
 header {
     /* 3 | NAVBAR          */
     nav {
-        max-width: 100%;
+        position: fixed;
+        width: 100%;
         background-color: $Bleufonce;
         padding: 0 1.15rem;
         div{
@@ -44,7 +45,11 @@ header {
             margin: auto;
             li {
                 list-style: none;
-                
+                img{
+                    &:hover{
+                        animation: imageMouv 3s;
+                    }
+                }
                 a{
                     font-family: 'Montserrat';
                     text-decoration: none;
@@ -57,6 +62,9 @@ header {
                     &:hover{
                         text-decoration: underline;
                         text-underline-offset: 0.50rem;
+                        background-color: lighten($Bleufonce, 50%);
+                        transition: background-color, 2s;
+                        border-radius: 100px;
                     }
                 }
             }
@@ -67,7 +75,6 @@ header {
             }
         }
     }
-
     .terre {
         width: 100%;
         height: 330px;
@@ -111,8 +118,12 @@ main {
             margin-left: 0;
         }
     }
+    .articledroite{
+        animation: slideDowndroite 3s;
+    }
     .articlegauche {
         flex-direction: row-reverse;
+        animation: slideDowngauche 2s;
         div{
             margin-right: 7rem;
         }
@@ -165,6 +176,9 @@ article{
     img{
         width: 300px;
         object-fit: contain;
+        &:hover{
+            animation: imageMouv 2s;
+        }
     }
     p{
         text-align: justify;
@@ -264,6 +278,7 @@ footer{
                     background-color: lighten(#1B2430, 5%);
                     text-decoration: underline;
                     text-underline-offset: 0.50rem;
+                    transition: background-color, 2s;
                 }
             }
         }
@@ -291,6 +306,9 @@ footer{
     header{
         position: relative;
         nav{
+            position: initial;
+            max-width: 100%;
+            width: initial;
             div{
                 display: flex;
                 height: 3.75rem;
@@ -477,4 +495,44 @@ footer{
     }
     }
     
+}
+@keyframes slideDown {
+    from{
+        transform: translateY(100px);
+        opacity: (0);
+    }
+    to{
+        transform: translateY(0);
+        opacity: (1);
+    }
+}
+@keyframes slideDowndroite{
+    from{
+        transform: translateX(300px);
+        opacity: (0);
+    }
+    to{
+        transform: translateX(0);
+        opacity: (1);
+    }
+}
+@keyframes slideDowngauche{
+    from{
+        transform: translateX(-300px);
+        opacity: (0);
+    }
+    to{
+        transform: translateX(0);
+        opacity: (1);
+    }
+}
+@keyframes imageMouv {
+    5%{ transform: rotate(-5deg);}
+    10%{ transform: rotate(-10deg);}
+    25%{ transform: rotate(-5deg);}
+    50%{ transform: rotate(0deg);}
+    75%{ transform: rotate(5deg);}
+    80%{ transform: rotate(10deg);}
+    90%{ transform: rotate(5deg);}
+    100%{ transform: rotate(0deg);}
 }
